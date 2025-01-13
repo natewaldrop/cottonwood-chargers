@@ -51,9 +51,10 @@ async function fetchStatus(locationMap) {
             const statusText = charger.status.replace(/_/g, ' ');
 
             chargerElement.innerHTML = `
-        <span class="indicator ${status}"></span>
-        <span class="indicator-text">${charger.serialNumber} - [${statusText}]</span>
-    `;
+                <span class="indicator ${status}"></span>
+                <span class="indicator-text">${charger.serialNumber} - [${statusText}]</span>
+            `;
+            chargerElement.title = `${charger.maxVoltage}V ${charger.maxCurrent}A ${charger.maxPower}W`;
             locationElement.appendChild(chargerElement);
         });
 
