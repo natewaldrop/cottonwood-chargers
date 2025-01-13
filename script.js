@@ -54,6 +54,7 @@ async function fetchStatus(locationMap) {
         <span class="indicator ${status}"></span>
         <span class="indicator-text">${charger.serialNumber} - [${statusText}]</span>
     `;
+            chargerElement.title = `${charger.maxVoltage}V ${charger.maxCurrent}A ${charger.maxPower}W`;
             locationElement.appendChild(chargerElement);
         });
 
