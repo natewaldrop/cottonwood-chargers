@@ -45,11 +45,11 @@ h1 {
 
 .indicator {
     display: inline-block;
-    width: 20px;
+    width: 35px;
     /* Increase width of indicator */
-    height: 20px;
+    height: 35px;
     /* Increase height of indicator */
-    border-radius: 50%;
+    border-radius: 45%;
     margin-right: 12px;
 }
 
@@ -82,4 +82,11 @@ h1 {
     /* font-size: 1.2em; */
     /* margin-bottom: 10px; */
     color: #333;
+}
+.indicator-power-text{
+    font-size: .6em;
+    align-content: center;
+    color: white;
+    text-align: center;
+    
 }
