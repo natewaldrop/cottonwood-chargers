@@ -49,9 +49,9 @@ async function fetchStatus(locationMap) {
                             "status-offline";
 
             const statusText = charger.status.replace(/_/g, ' ');
-
+            const powerText = charger.maxPower === 0 ? "" : `${(charger.maxPower / 1000).toFixed(2).slice(0,3)}kW`;
             chargerElement.innerHTML = `
-                <span class="indicator ${status}"></span>
+                <span class="indicator ${status} indicator-power-text">${powerText}</span>
                 <span class="indicator-text">${charger.serialNumber} - [${statusText}]</span>
             `;
             chargerElement.title = `${charger.maxVoltage}V ${charger.maxCurrent}A ${charger.maxPower}W`;
