@@ -52,12 +52,13 @@ async function fetchStatus(locationMap) {
             const powerText = charger.maxPower === 0 ? "" : `${(charger.maxPower / 1000).toFixed(2).slice(0,3)}kW`;
             chargerElement.innerHTML = `
                 <span class="indicator ${status} indicator-power-text">${powerText}</span>
-                <span class="indicator-text">${charger.serialNumber} - [${statusText}]</span>
+                <span class="indicator-text">${(charger.serialNumber).replace("BAE","")} | ${(charger.portName).replace("Series 7 ","")}</span>
+                <hr>
+                <span class="indicator-status-text">[${statusText}]</span>
             `;
             chargerElement.title = `${charger.maxVoltage}V ${charger.maxCurrent}A ${charger.maxPower}W`;
             locationElement.appendChild(chargerElement);
         });
-
         statusContainer.appendChild(locationElement);
     });
 
