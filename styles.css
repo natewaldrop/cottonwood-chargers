@@ -94,3 +94,8 @@ h1 {
     text-align: center;
     
 }
+.indicator-duration-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+}

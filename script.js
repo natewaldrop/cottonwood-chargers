@@ -8,6 +8,8 @@ const locationIds = [
 const apiEndpoint = "https://apigw.blinknetwork.com/v3/locations/";
 const mapEndpoint = "https://apigw.blinknetwork.com/v3/locations/map/";
 
+const statusHistory = {};
+
 async function fetchLocationNames() {
     const requests = locationIds.map(id => fetch(`${mapEndpoint}${id}`));
     const responses = await Promise.all(requests);
@@ -50,11 +52,28 @@ async function fetchStatus(locationMap) {
 
             const statusText = charger.status.replace(/_/g, ' ');
             const powerText = charger.maxPower === 0 ? "" : `${(charger.maxPower / 1000).toFixed(2).slice(0,3)}kW`;
+
+            // Update status history
+            const chargerId = charger.portId;
+            if (!statusHistory[chargerId]) {
+                statusHistory[chargerId] = [];
+            }
+            const lastStatus = statusHistory[chargerId].slice(-1)[0];
+            if (!lastStatus || lastStatus.status !== charger.status) {
+                statusHistory[chargerId].push({ status: charger.status, timestamp: new Date() });
+            }
+
+            // Calculate duration of current status
+            const currentStatus = statusHistory[chargerId].slice(-1)[0];
+            const duration = Math.floor((new Date() - new Date(currentStatus.timestamp)) / 1000); // in seconds
+            const durationText = `${Math.floor(duration / 60)}m ${duration % 60}s`;
+
             chargerElement.innerHTML = `
                 <span class="indicator ${status} indicator-power-text">${powerText}</span>
                 <span class="indicator-text">${(charger.serialNumber).replace("BAE","")} | ${(charger.portName).replace("Series 7 ","")}</span>
                 <hr>
                 <span class="indicator-status-text">[${statusText}]</span>
+                <span class="indicator-duration-text">(${durationText})</span>
             `;
             chargerElement.title = `${charger.maxVoltage}V ${charger.maxCurrent}A ${charger.maxPower}W`;
             locationElement.appendChild(chargerElement);
@@ -71,5 +90,18 @@ async function initializePage() {
     fetchStatus(locationMap);
     setInterval(() => fetchStatus(locationMap), 300000); // Refresh every 5 minutes
 }
+
+async function refreshStatus() {
+    const locationMap = await fetchLocationNames();
+    fetchStatus(locationMap);
+}
+
+// Warn user before leaving the page
+window.addEventListener('beforeunload', (event) => {
+    const message = 'Leaving or refreshing the page will rest the status timers, are you sure you want to leave?';
+    event.preventDefault();
+    event.returnValue = message;
+    return message;
+});
 
 initializePage();
