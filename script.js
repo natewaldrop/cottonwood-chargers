@@ -66,7 +66,7 @@ async function fetchStatus(locationMap) {
             // Calculate duration of current status
             const currentStatus = statusHistory[chargerId].slice(-1)[0];
             const duration = Math.floor((new Date() - new Date(currentStatus.timestamp)) / 1000); // in seconds
-            const durationText = `${Math.floor(duration / 60)}m ${duration % 60}s`;
+            const durationText = `${Math.floor(duration / 3600)}h ${Math.floor((duration % 3600) / 60)}m`;
 
             chargerElement.innerHTML = `
                 <span class="indicator ${status} indicator-power-text">${powerText}</span>
