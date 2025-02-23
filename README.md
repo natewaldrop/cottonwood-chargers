@@ -100,5 +100,49 @@ The unrestricted api does not show the current speed of charge. That data will s
 ]
 
 ```
-
 </details>
+
+
+## Locations of Charger IDs
+
+### CW Corp 2755
+* 708333 - Port 1 - New charger right outside the underground entrance
+* 708333 - Port 2 - New charger right outside the underground entrance
+* 703006 - Port 1 - (MISSING FROM APP) - I need to find where they are mapped. Next to 708333.
+* 703006 - Port 2 - (MISSING FROM APP) - I need to find where they are mapped. Next to 708333.
+* 060589 - PORT 1
+* 603486 - PORT 1
+* 603487 - PORT 1
+* 603494 - PORT 1
+
+### CW Corp 2795
+#### Underground
+*  603488 - PORT 1 - Closest to the stairs - Original station
+*  603489 - PORT 1 - 2nd from the stairs
+*  906366 - PORT 1 - 3rd from the stairs
+*  906367 - PORT 1 - 4th from the stairs
+
+#### North of the Gym (Uncovered)
+* 708355 - Port 1 (MISSING FROM APP) - Closest to the north entrance
+* 708355 - Port 2 (MISSING FROM APP) - Closest to the north entrance
+* 707704 - Port 1
+* 707704 - Port 2
+* 708330 - Port 1
+* 708330 - Port 2
+* 705580 - Port 1
+* 705580 - Port 2
+
+### CW Corp 2825
+* 603490 - Port 1 - Has been unavailable for months
+* 603491 - Port 1
+* 906364 - Port 1
+* 906365 - Port 1
+
+
+### CW Corp 2855
+* 603485 - Port 1
+* 603492 - Port 1
+* 603493 - Port 1
+* 603496 - Port 1
+* 705939 - Port 1
+* 705939 - Port 2
