@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "source": "blink-to-chargehub-mapping",
+  "refreshMs": 300000,
+  "chargehubStationIds": [61497, 61498, 135096],
+  "locations": [
+    {
+      "locationKey": "2755",
+      "locationName": "2755 Cottonwood Parkway",
+      "chargers": [
+        { "charger": 1, "stationCode": "BAE703006", "port": 1, "map": { "stationId": 61497, "base": "BAE703006", "port": 1 } },
+        { "charger": 2, "stationCode": "BAE703006", "port": 2, "map": { "stationId": 61497, "base": "BAE703006", "port": 2 } },
+        { "charger": 3, "stationCode": "BAE708333", "port": 1, "map": null },
+        { "charger": 4, "stationCode": "BAE708333", "port": 2, "map": null },
+        { "charger": 5, "stationCode": "BAE603494", "port": null, "map": { "stationId": 61497, "base": "BAE603494" } },
+        { "charger": 6, "stationCode": "BAE060589", "port": null, "map": { "stationId": 61497, "base": "BAE060589" } },
+        { "charger": 7, "stationCode": "BAE603487", "port": null, "map": { "stationId": 61497, "base": "BAE603487" } },
+        { "charger": 8, "stationCode": "BAE603486", "port": null, "map": { "stationId": 61497, "base": "BAE603486" } }
+      ]
+    },
+    {
+      "locationKey": "2795",
+      "locationName": "2795 Cottonwood Parkway",
+      "chargers": [
+        { "charger": 1, "stationCode": "BAE906366", "port": null, "map": { "stationId": 61497, "base": "BAE906366" } },
+        { "charger": 2, "stationCode": "BAE906367", "port": null, "map": { "stationId": 61497, "base": "BAE906367" } },
+        { "charger": 3, "stationCode": "BAE603489", "port": null, "map": { "stationId": 61497, "base": "BAE603489" } },
+        { "charger": 4, "stationCode": "BAE603488", "port": null, "map": { "stationId": 61497, "base": "BAE603488" } },
+        { "charger": 5, "stationCode": "BAE705580", "port": 1, "map": null },
+        { "charger": 6, "stationCode": "BAE705580", "port": 2, "map": null },
+        { "charger": 7, "stationCode": "BAE707704", "port": 1, "map": null },
+        { "charger": 8, "stationCode": "BAE707704", "port": 2, "map": null },
+        { "charger": 9, "stationCode": "BAE708330", "port": 1, "map": null },
+        { "charger": 10, "stationCode": "BAE708330", "port": 2, "map": null },
+        { "charger": 11, "stationCode": "BAE708335", "port": 1, "map": { "stationId": 61497, "base": "BAE708335", "port": 1 } },
+        { "charger": 12, "stationCode": "BAE708335", "port": 2, "map": { "stationId": 61497, "base": "BAE708335", "port": 2 } }
+      ]
+    },
+    {
+      "locationKey": "2825",
+      "locationName": "2825 Cottonwood Parkway",
+      "chargers": [
+        { "charger": 1, "stationCode": "BAE603491", "port": null, "map": { "stationId": 61498, "base": "BAE603491" } },
+        { "charger": 2, "stationCode": "BAE603490", "port": null, "map": { "stationId": 61498, "base": "BAE603490" } },
+        { "charger": 3, "stationCode": "BAE906365", "port": null, "map": { "stationId": 61498, "base": "BAE906365" } },
+        { "charger": 4, "stationCode": "BAE906364", "port": null, "map": { "stationId": 61498, "base": "BAE906364" } }
+      ]
+    },
+    {
+      "locationKey": "2855",
+      "locationName": "2855 Cottonwood Parkway",
+      "chargers": [
+        { "charger": 1, "stationCode": "BAE603492", "port": null, "map": { "stationId": 135096, "base": "BAE603492" } },
+        { "charger": 2, "stationCode": "BAE603496", "port": null, "map": { "stationId": 135096, "base": "BAE603496" } },
+        { "charger": 3, "stationCode": "BAE603493", "port": null, "map": { "stationId": 135096, "base": "BAE603493" } },
+        { "charger": 4, "stationCode": "BAE603485", "port": null, "map": { "stationId": 135096, "base": "BAE603485" } },
+        { "charger": 5, "stationCode": "BAE705939", "port": 1, "map": null },
+        { "charger": 6, "stationCode": "BAE705939", "port": 2, "map": null },
+        { "charger": 7, "stationCode": "BAE705940", "port": 1, "map": { "stationId": 135096, "base": "BAE705940", "port": 1 } },
+        { "charger": 8, "stationCode": "BAE705940", "port": 2, "map": { "stationId": 135096, "base": "BAE705940", "port": 2 } }
+      ]
+    }
+  ]
+}
